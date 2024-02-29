@@ -1,11 +1,20 @@
-vim.opt.number = true
-vim.opt.smartcase = true
-vim.opt.ignorecase = true
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.clipboard = "unnamedplus"
-vim.opt.shiftround = true
-vim.opt.linebreak = true
-vim.opt.cursorline = true
-vim.opt.swapfile = false
+vim.api.nvim_set_var("mapleader", "_")
+
+local options = {
+	number = true,
+	smartcase = true,
+	ignorecase = true,
+	tabstop = 4,
+	shiftwidth = 4,
+	clipboard = "unnamedplus",
+	shiftround = true,
+	linebreak = true,
+	cursorline = true,
+	swapfile = false,
+}
+
+for option, value in pairs(options) do
+	vim.opt[option] = value
+end
+
 vim.cmd.colorscheme("dracula")
