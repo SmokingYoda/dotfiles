@@ -1,9 +1,6 @@
 local telescope = require("telescope")
 
 telescope.setup({
-	mappings = {
-		["<F6>"] = "which_key",
-	},
 	pickers = {
 		find_files = {
 			theme = "dropdown",

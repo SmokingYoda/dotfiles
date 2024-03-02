@@ -3,7 +3,6 @@ local plugins = {}
 -- Comment un-needed plugins and run :PlugClean
 
 plugins.getPlugins = function (Plug)
-	Plug("natecraddock/sessions.nvim")
 	Plug("3rd/image.nvim")							-- Dependency for noice
 	Plug("L3MON4D3/LuaSnip")						-- Snipping engine
 	Plug("Mofiqul/dracula.nvim")					-- Theme
@@ -11,6 +10,7 @@ plugins.getPlugins = function (Plug)
 	Plug("aaronhallaert/advanced-git-search.nvim")
 	Plug("folke/neodev.nvim")						-- Completion for Neovim API
 	Plug("folke/noice.nvim")						-- Main UI
+	Plug("folke/persistence.nvim")
 	Plug("folke/todo-comments.nvim")				-- TODO coloroing and motion
 	Plug("folke/trouble.nvim")						-- For debugging
 	Plug("folke/which-key.nvim")					-- Shows mapped keys.
@@ -24,6 +24,7 @@ plugins.getPlugins = function (Plug)
 	Plug("j-hui/fidget.nvim")						-- UI plugin
 	Plug("lukas-reineke/indent-blankline.nvim")		-- UI plugin
 	Plug("mfussenegger/nvim-dap")					-- Debuggin plugin
+	Plug("natecraddock/sessions.nvim")
 	Plug("natecraddock/workspaces.nvim")
 	Plug("neovim/nvim-lspconfig")					-- LSP
 	Plug("numToStr/Comment.nvim")					-- Commenting plugin
