@@ -10,7 +10,7 @@ require("workspaces").setup({
 		auto_open = true,
 		open = { function()
 			require("sessions").load(nil, { silent = true })
-		end, "Telescope find_files"
+		end, "Telescope git_status"
 		},
 	}
 })
