@@ -12,6 +12,8 @@ cmp.setup({
 	})
 })
 
+
+keymap("n", "<leader><F3>", ":Telescope advanced_git_search diff_commit_file<CR>", default_opts)
 keymap("n", "<F3>", ":Telescope git_files<CR>", default_opts)
 keymap("n", "<F6>", ":RustRun<CR>", default_opts)
 keymap("n", "<F4>", ":Telescope git_status<CR>", default_opts)
