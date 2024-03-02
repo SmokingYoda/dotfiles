@@ -3,6 +3,8 @@ local plugins = {}
 -- Comment un-needed plugins and run :PlugClean
 
 plugins.getPlugins = function (Plug)
+	Plug("soulis-1256/eagle.nvim")
+	Plug("github/copilot.vim")
 	Plug("3rd/image.nvim")							-- Dependency for noice
 	Plug("L3MON4D3/LuaSnip")						-- Snipping engine
 	Plug("Mofiqul/dracula.nvim")					-- Theme

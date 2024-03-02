@@ -1,3 +1,4 @@
+vim.o.mousemoveevent = true
 vim.api.nvim_set_var("mapleader", "_")
 
 local options = {

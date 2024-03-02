@@ -16,7 +16,6 @@ lsp.lua_ls.setup({
 	}
 })
 
--- Rust onjelmointiin.
 lsp.rust_analyzer.setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
@@ -54,3 +53,5 @@ vim.api.nvim_create_autocmd('LspAttach', {
 		end, opts)
 	end
 })
+
+require("eagle").setup({})
