@@ -3,11 +3,12 @@ local plugins = {}
 -- Comment un-needed plugins and run :PlugClean
 
 plugins.getPlugins = function(Plug)
-	Plug("Shatur/neovim-session-manager")
+	Plug("iamcco/markdown-preview.nvim")
 	Plug("3rd/image.nvim")                              -- Dependency for noice
 	Plug("L3MON4D3/LuaSnip")                            -- Snipping engine
 	Plug("Mofiqul/dracula.nvim")                        -- Theme
 	Plug("MunifTanjim/nui.nvim")                        -- Dependency for noice
+	Plug("Shatur/neovim-session-manager")
 	Plug("aaronhallaert/advanced-git-search.nvim")
 	Plug("folke/neodev.nvim")                           -- Completion for Neovim API
 	Plug("folke/noice.nvim")                            -- Main UI
