@@ -29,7 +29,6 @@ plugins.getPlugins = function (Plug)
 	Plug("numToStr/Comment.nvim")					-- Commenting plugin
 	Plug("nvim-lua/plenary.nvim")					-- Dependency
 	Plug("nvim-lualine/lualine.nvim")				-- UI plugin
-	Plug("nvim-neo-tree/neo-tree.nvim")				-- File plugin
 	Plug("nvim-telescope/telescope.nvim")			-- Fuzzy finder
 	Plug("nvim-tree/nvim-web-devicons")				-- Dependency
 	Plug("nvim-treesitter/nvim-treesitter")			-- Syntax

@@ -6,6 +6,6 @@ require("workspaces").setup({
 			require("session").load(nil, { silent = true })
 		end,
 		auto_open = true,
-		open = { "Neotree" },
+		open = { "Telescope find_files" },
 	}
 })
