@@ -7,7 +7,7 @@ require("smokingyoda.plugins").getPlugins(Plug) -- Määrittää mitkä lisäosa
 
 vim.call('plug#end')
 
-require("smokingyoda.ui")
+require("smokingyoda.ui") -- Made a stupid comment to see if my dumbass can push over SSH.
 require("smokingyoda.telescope")
 require("smokingyoda.treesitter")
 require("smokingyoda.luasnip")
