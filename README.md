@@ -1,0 +1,13 @@
+# TODO
+- Copilot. [x]
+- GPT.3/4. [ ]
+- Laita MD preview. [x]
+- Laita c# toimimaan. [ ]
+- Laita file mgr tai vastaava. [x]
+- Laita jonkin näkönen session/workspace manageri. [?]
+- Laita rust toimimaan Neovimissä. Completion, snippets, jne. [x]
+- Parempi git integraatio. [x]
+- Tee Neovimistä vähän nätimpi. [x]
+- Addaa omia keybindeja. [?]
+- Opettele käyttään gitiä. [!]
+- Reworkaa structure. [ ]
