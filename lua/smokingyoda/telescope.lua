@@ -10,9 +10,13 @@ telescope.setup({
 		},
 		file_browser = {
 			theme = "dropdown",
-		}
+		},
+		live_grep = {
+			theme = "dropdown",
+		},
 	}
 })
 
+telescope.load_extension("workspaces")
 telescope.load_extension("advanced_git_search")
 telescope.load_extension("noice")

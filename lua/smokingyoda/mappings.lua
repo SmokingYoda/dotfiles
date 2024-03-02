@@ -12,6 +12,7 @@ cmp.setup({
 	})
 })
 
+keymap("n", "<F10>", ":Telescope workspaces<CR>", default_opts)
 keymap("n", "<leader><F3>", ":Telescope advanced_git_search diff_commit_file<CR>", default_opts)
 keymap("n", "<F3>", ":Telescope find_files<CR>", default_opts)
 keymap("n", "<F9>", ":RustRun<CR>", default_opts)
