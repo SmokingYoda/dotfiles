@@ -1,11 +1,16 @@
 require("sessions").setup({})
-
+require("session_manager").setup({})
 require("workspaces").setup({
 	hooks = {
-		load = function()
-			require("session").load(nil, { silent = true })
-		end,
+		load = { function()
+			require("sessions").save(nil, { silent = true })
+		end
+		},
+		open_pre = { "SessionsStop" },
 		auto_open = true,
-		open = { "Telescope find_files" },
+		open = { function()
+			require("sessions").load(nil, { silent = true })
+		end, "Telescope find_files"
+		},
 	}
 })
