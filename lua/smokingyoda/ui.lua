@@ -32,4 +32,3 @@ require('lualine').setup({
 })
 require("dapui").setup({})
 require("dressing").setup({})
-require("bufferline").setup({})

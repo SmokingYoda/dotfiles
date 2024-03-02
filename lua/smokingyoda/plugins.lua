@@ -9,7 +9,6 @@ plugins.getPlugins = function (Plug)
 	Plug("L3MON4D3/LuaSnip")						-- Snipping engine
 	Plug("Mofiqul/dracula.nvim")					-- Theme
 	Plug("MunifTanjim/nui.nvim")					-- Dependency for noice
-	Plug("akinsho/bufferline.nvim")					-- UI plugin
 	Plug("folke/neodev.nvim")						-- Completion for Neovim API
 	Plug("folke/noice.nvim")						-- Main UI
 	Plug("folke/todo-comments.nvim")				-- TODO coloroing and motion
@@ -22,7 +21,6 @@ plugins.getPlugins = function (Plug)
 	Plug("hrsh7th/cmp-path")						-- Dependency for CMP
 	Plug("hrsh7th/nvim-cmp")						-- Completion plugin
 	Plug("j-hui/fidget.nvim")						-- UI plugin
-	Plug("lewis6991/gitsigns.nvim")					-- Git integration
 	Plug("lukas-reineke/indent-blankline.nvim")		-- UI plugin
 	Plug("mfussenegger/nvim-dap")					-- Debuggin plugin
 	Plug("neovim/nvim-lspconfig")					-- LSP
