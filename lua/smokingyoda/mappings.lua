@@ -12,15 +12,10 @@ cmp.setup({
 	})
 })
 
-
 keymap("n", "<leader><F3>", ":Telescope advanced_git_search diff_commit_file<CR>", default_opts)
-keymap("n", "<F3>", ":Telescope git_files<CR>", default_opts)
-keymap("n", "<F6>", ":RustRun<CR>", default_opts)
-keymap("n", "<F4>", ":Telescope git_status<CR>", default_opts)
-keymap("n", "<C-h>s", "v2", default_opts)
-keymap("n", "<C-l>s", "v$", default_opts)
-keymap("n", "<C-j>s", "viB", default_opts)
-keymap("n", "<C-h>s", "vaB", default_opts)
+keymap("n", "<F3>", ":Telescope find_files<CR>", default_opts)
+keymap("n", "<F9>", ":RustRun<CR>", default_opts)
+keymap("n", "<F7>", ":Telescope git_status<CR>", default_opts)
 keymap("n", "<S-Up>", "<C-w>k", default_opts) -- Siirry ylempään ikkunaan
 keymap("n", "<S-Down>", "<C-w>j", default_opts) -- Siirry alempaan ikkunaan
 keymap("n", "<S-Right>", "<C-w>l", default_opts) -- Siirry oikeaan ikkunaan
