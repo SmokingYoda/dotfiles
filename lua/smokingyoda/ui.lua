@@ -1,5 +1,7 @@
 local noice = require("noice")
 
+require("dressing").setup({})
+
 require("alpha").setup(require("alpha.themes.dashboard").config)
 
 noice.setup({
@@ -30,5 +32,5 @@ require('lualine').setup({
 		}
 	}
 })
+
 require("dapui").setup({})
-require("dressing").setup({})

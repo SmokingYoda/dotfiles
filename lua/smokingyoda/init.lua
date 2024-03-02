@@ -9,6 +9,7 @@ vim.call('plug#end')
 
 require("smokingyoda.ui") -- Made a stupid comment to see if my dumbass can push over SSH.
 require("smokingyoda.telescope")
+require("smokingyoda.workspaces")
 require("smokingyoda.treesitter")
 require("smokingyoda.luasnip")
 require("smokingyoda.cmp")

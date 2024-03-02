@@ -3,6 +3,9 @@ local plugins = {}
 -- Comment un-needed plugins and run :PlugClean
 
 plugins.getPlugins = function (Plug)
+	Plug("natecraddock/workspaces.nvim")
+	Plug("tpope/vim-fugitive")
+	Plug("aaronhallaert/advanced-git-search.nvim")
 	Plug("soulis-1256/eagle.nvim")
 	Plug("github/copilot.vim")
 	Plug("3rd/image.nvim")							-- Dependency for noice
