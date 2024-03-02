@@ -12,9 +12,9 @@ cmp.setup({
 	})
 })
 
-keymap("n", "<leader>f", ":Telescope git_files<CR>", default_opts)
+keymap("n", "<F3>", ":Telescope git_files<CR>", default_opts)
 keymap("n", "<F6>", ":RustRun<CR>", default_opts)
-keymap("n", "<F4>", ":Telescope find_files<CR>", default_opts)
+keymap("n", "<F4>", ":Telescope git_status<CR>", default_opts)
 keymap("n", "<C-h>s", "v2", default_opts)
 keymap("n", "<C-l>s", "v$", default_opts)
 keymap("n", "<C-j>s", "viB", default_opts)
