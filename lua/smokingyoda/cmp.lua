@@ -1,4 +1,5 @@
 require("nvim-autopairs").setup({})
+require("luasnip.loaders.from_vscode").lazy_load()
 
 local autopairs = require('nvim-autopairs.completion.cmp')
 local cmp = require("cmp")
