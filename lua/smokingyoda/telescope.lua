@@ -10,6 +10,6 @@ telescope.setup({
 	}
 })
 
-telescope.load_extension("workspaces")
+telescope.load_extension("projects")
 telescope.load_extension("advanced_git_search")
 telescope.load_extension("noice")

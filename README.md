@@ -1,0 +1,2 @@
+- Removed sessions, workspaces and rust-analyzer from lspconfig.
+- Added neogen, project, zen-mode, mason, nvim-tree, and rustaceanvim.

@@ -1,3 +1,4 @@
+require("mason").setup({})
 require("neodev").setup({
 	library = {
 		plugins = { "nvim-dap-ui" },
@@ -14,7 +15,7 @@ require("nvim-treesitter.configs").setup({
 
 local lsp = require("lspconfig")
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
-local on_attach = function (_, bufnr)
+local on_attach = function(_, bufnr)
 	vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 	require('completion').on_attach()
 end
@@ -30,13 +31,15 @@ lsp.lua_ls.setup({
 	}
 })
 
-lsp.rust_analyzer.setup({
-	capabilities = capabilities,
-	on_attach = on_attach,
-	settings = {
-		["rust-analyzer"] = {}
-	}
-})
+--[[ Changed to rustaceanvim for easier debugging.
+	lsp.rust_analyzer.setup({
+		capabilities = capabilities,
+		on_attach = on_attach,
+		settings = {
+			["rust-analyzer"] = {}
+		}
+	})
+--]]
 
 lsp.zls.setup({
 	capabilities = capabilities,
@@ -45,7 +48,7 @@ lsp.zls.setup({
 
 vim.api.nvim_create_autocmd('LspAttach', {
 	group = vim.api.nvim_create_augroup('UserLspConfig', {}),
-	callback = function (ev)
+	callback = function(ev)
 		vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
 		local opts = { buffer = ev.buf }
 		vim.keymap.set('n', '<leader>FF', vim.lsp.buf.format, opts)
@@ -56,14 +59,14 @@ vim.api.nvim_create_autocmd('LspAttach', {
 		vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
 		vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, opts)
 		vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, opts)
-		vim.keymap.set('n', '<space>wl', function ()
+		vim.keymap.set('n', '<space>wl', function()
 			print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
 		end, opts)
 		vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, opts)
 		vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, opts)
 		vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, opts)
 		vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
-		vim.keymap.set('n', '<space>f', function ()
+		vim.keymap.set('n', '<space>f', function()
 			vim.lsp.buf.format { async = true }
 		end, opts)
 	end

@@ -6,14 +6,14 @@ local cmp = require("cmp")
 cmp.setup({
 	mapping = cmp.mapping.preset.insert({
 		["<CR>"] = cmp.mapping.confirm(),
-		["<Esc>"] = cmp.mapping.abort(),
+		["<C-c>"] = cmp.mapping.close(),
 		["<S-Tab>"] = cmp.mapping.select_prev_item(),
 		["<Tab>"] = cmp.mapping.select_next_item(),
 	})
 })
 
 keymap("n", "<leader><F10>", ":MarkdownPreview<CR>", default_opts)
-keymap("n", "<F10>", ":Telescope workspaces<CR>", default_opts)
+keymap("n", "<F10>", ":Telescope projects<CR>", default_opts)
 keymap("n", "<leader><F3>", ":Telescope advanced_git_search diff_commit_file<CR>", default_opts)
 keymap("n", "<F3>", ":Telescope find_files<CR>", default_opts)
 keymap("n", "<F9>", ":RustRun<CR>", default_opts)

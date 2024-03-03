@@ -1,8 +1,8 @@
 vim.o.mousemoveevent = true
-vim.api.nvim_set_var("termguicolors", true)
 vim.api.nvim_set_var("mapleader", "_")
 
 local options = {
+	termguicolors = true,
 	number = true,
 	smartcase = true,
 	ignorecase = true,

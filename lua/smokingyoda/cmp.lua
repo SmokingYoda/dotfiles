@@ -1,5 +1,6 @@
 require("nvim-autopairs").setup({})
 require("luasnip.loaders.from_vscode").lazy_load()
+require('neogen').setup({ snippet_engine = "luasnip" })
 
 local autopairs = require('nvim-autopairs.completion.cmp')
 local cmp = require("cmp")
