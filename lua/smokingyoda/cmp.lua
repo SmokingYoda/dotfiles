@@ -21,7 +21,6 @@ cmp.setup({
 
 cmp.event:on("confirm_done", autopairs.on_confirm_done())
 
-
 cmp.setup.filetype('gitcommit', {
 	sources = cmp.config.sources({
 			{ name = "git" } },

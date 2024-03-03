@@ -3,6 +3,8 @@ local plugins = {}
 -- Comment un-needed plugins and run :PlugClean
 
 plugins.getPlugins = function(Plug)
+	Plug("projekt0n/github-nvim-theme")
+	Plug("NvChad/nvim-colorizer.lua")
 	Plug("natecraddock/workspaces.nvim")
 	Plug("rmagatti/auto-session")
 	Plug("iamcco/markdown-preview.nvim")

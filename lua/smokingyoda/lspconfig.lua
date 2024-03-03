@@ -1,3 +1,17 @@
+require("neodev").setup({
+	library = {
+		plugins = { "nvim-dap-ui" },
+		types = true
+	}
+})
+
+require("nvim-treesitter.configs").setup({
+	auto_install = false,
+	ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "rust", "xml", "typescript", "tsx", "tmux", "regex", "php", "json", "javascript", "html", "css", "c_sharp" },
+	highlight = { enable = true },
+	sync_install = true,
+})
+
 local lsp = require("lspconfig")
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 local on_attach = function (_, bufnr)

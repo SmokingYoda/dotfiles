@@ -1,7 +1,6 @@
 vim.o.mousemoveevent = true
+vim.api.nvim_set_var("termguicolors", true)
 vim.api.nvim_set_var("mapleader", "_")
-package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?/init.lua;"
-package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?.lua;"
 
 local options = {
 	number = true,
@@ -20,4 +19,4 @@ for option, value in pairs(options) do
 	vim.opt[option] = value
 end
 
-vim.cmd.colorscheme("dracula")
+vim.cmd.colorscheme("github_dark_default")
