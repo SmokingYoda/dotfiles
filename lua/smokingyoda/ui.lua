@@ -1,8 +1,7 @@
 local noice = require("noice")
 
 require("dressing").setup({})
-
-require("alpha").setup(require("alpha.themes.dashboard").config)
+require("alpha").setup(require("alpha.themes.theta").config)
 
 noice.setup({
 	lsp = {
