@@ -23,6 +23,7 @@ noice.setup({
 require('lualine').setup({
 	options = { theme = "dracula-nvim" },
 	sections = {
+		lualine_c = { require("auto-session.lib").current_session_name },
 		lualine_x = {
 			{ noice.api.status.message.get_hl, cond = noice.api.status.message.has },
 			{ noice.api.status.command.get, cond = noice.api.status.command.has, color = { fg = "#ff9e64" }},

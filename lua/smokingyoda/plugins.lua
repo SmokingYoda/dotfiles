@@ -3,6 +3,8 @@ local plugins = {}
 -- Comment un-needed plugins and run :PlugClean
 
 plugins.getPlugins = function(Plug)
+	Plug("natecraddock/workspaces.nvim")
+	Plug("rmagatti/auto-session")
 	Plug("iamcco/markdown-preview.nvim")
 	Plug("L3MON4D3/LuaSnip")                            -- Snipping engine
 	Plug("Mofiqul/dracula.nvim")                        -- Theme
@@ -14,7 +16,7 @@ plugins.getPlugins = function(Plug)
 	Plug("folke/trouble.nvim")                          -- For debugging
 	Plug("folke/which-key.nvim")                        -- Shows mapped keys.
 	Plug("github/copilot.vim")
-	Plug("goolord/alpha-nvim", { ["event"] = "VimEnter" }) -- Dashboard
+	Plug("goolord/alpha-nvim")
 	Plug("hrsh7th/cmp-buffer")                          -- Dependency for CMP
 	Plug("hrsh7th/cmp-cmdline")                         -- Dependency for CMP
 	Plug("hrsh7th/cmp-nvim-lsp")                        -- Dependency for CMP
@@ -23,8 +25,6 @@ plugins.getPlugins = function(Plug)
 	Plug("j-hui/fidget.nvim")                           -- UI plugin
 	Plug("lukas-reineke/indent-blankline.nvim")         -- UI plugin
 	Plug("mfussenegger/nvim-dap")                       -- Debuggin plugin
-	Plug("natecraddock/sessions.nvim", { ["event"] = "BufReadPre" })
-	Plug("natecraddock/workspaces.nvim")
 	Plug("neovim/nvim-lspconfig")        -- LSP
 	Plug("numToStr/Comment.nvim")        -- Commenting plugin
 	Plug("nvim-lua/plenary.nvim")        -- Dependency
