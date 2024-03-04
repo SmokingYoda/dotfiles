@@ -12,7 +12,6 @@ vim.call('plug#end')
 
 require("smokingyoda.ui") -- Made a stupid comment to see if my dumbass can push over SSH.
 require("smokingyoda.workspaces")
-require("smokingyoda.telescope")
 require("smokingyoda.cmp")
 require("smokingyoda.lspconfig")
 require("smokingyoda.options")

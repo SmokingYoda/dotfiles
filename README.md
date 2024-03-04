@@ -1,2 +1,14 @@
-- Removed sessions, workspaces and rust-analyzer from lspconfig.
-- Added neogen, project, zen-mode, mason, nvim-tree, and rustaceanvim.
+### TODO
+- Ability to handle sessions automatically [ ]
+
+
+- Completion [x]
+- Copilot [x]
+- Debug adapter protocol [x]
+- Display images on grep preview [ ]
+- File explorer [x]
+- Git [x]
+- Language server protocol [x]
+- Project management [ ]
+- Snippet engine and snippets [x]
+- Diagnostic [ ]
