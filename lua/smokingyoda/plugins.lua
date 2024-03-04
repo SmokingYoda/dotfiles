@@ -31,7 +31,6 @@ plugins.getPlugins = function(Plug)
 	Plug("numToStr/Comment.nvim")            -- Commenting plugin
 	Plug("nvim-lua/plenary.nvim")            -- Dependency
 	Plug("nvim-lualine/lualine.nvim")        -- UI plugin
-	Plug("nvim-telescope/telescope.nvim")    -- Fuzzy finder
 	Plug("nvim-tree/nvim-web-devicons")      -- Dependency
 	Plug("nvim-treesitter/nvim-treesitter")  -- Syntax
 	Plug("projekt0n/github-nvim-theme")
@@ -39,7 +38,6 @@ plugins.getPlugins = function(Plug)
 	Plug("rcarriga/nvim-dap-ui")             -- Debuggin UI plugin
 	Plug("rcarriga/nvim-notify")             -- Dependency for noice
 	Plug("saadparwaiz1/cmp_luasnip")         -- Dependency for CMP
-	-- Plug("soulis-1256/eagle.nvim")
 	Plug("stevearc/dressing.nvim")           -- UI plugin
 	Plug("tpope/vim-fugitive")
 	Plug("williamboman/mason.nvim")
