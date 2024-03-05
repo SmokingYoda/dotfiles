@@ -13,8 +13,18 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
-local plugins = require("plugins")
 local setup = require("setup")
+
+setup.settings = {
+  use_telescope = true,
+  use_fzf = true,
+  use_neotree = true,
+  use_nvim_tree = true,
+  use_bufferline = true,
+  use_scope = true,
+}
+
+local plugins = require("plugins")
 
 require("lazy").setup({
 	plugins.core_plugins,

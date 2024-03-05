@@ -92,7 +92,8 @@ M.ui_plugins = {
 		"akinsho/bufferline.nvim",
 		version = "*",
 		dependencies = { "nvim-tree/nvim-web-devicons" }
-	}
+	},
+  { "tiagovla/scope.nvim" }
 }
 
 M.diagnostic_plugins = {

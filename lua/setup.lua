@@ -1,4 +1,13 @@
-local M = {}
+local M = {
+  settings = {
+    use_telescope = true,
+    use_fzf = false,
+    use_neotree = true,
+    use_nvim_tree = false,
+    use_bufferline = false,
+    use_scope = true,
+  }
+}
 
 M.setup_core = function()
   require("mason").setup()
@@ -18,10 +27,16 @@ M.setup_core = function()
     indent = { enable = true },
   })
 
-  require("fzf-lua").setup({ "telescope" })
+  if M.use_fzf then
+    require("fzf-lua").setup({ "telescope" })
+  end
 
-  require("telescope").load_extension("notify")
-  require("telescope").load_extension("projects")
+  if M.use_telescope then
+    require('telescope').setup()
+    require("telescope").load_extension("scope")
+    require("telescope").load_extension("notify")
+    require("telescope").load_extension("projects")
+  end
 
   require("nvim-tree").setup({
     sync_root_with_cwd = true,
@@ -155,7 +170,14 @@ M.setup_ui = function()
   require("lualine").setup({
     options = { theme = "tokyonight" }
   })
-  require("bufferline").setup()
+
+  if M.settings.use_bufferline then
+    require("bufferline").setup()
+  end
+
+  if M.settings.use_scope then
+    require("scope").setup()
+  end
 
   local highlight = {
     "Black",
