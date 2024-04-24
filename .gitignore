@@ -3,11 +3,10 @@ cef_user_data
 dconf
 discord
 Electron
+go
 gtk-3.0
 ibus
-init.lua
 lazy-lock.json
-lua
 obs-studio
 pavucontrol.ini
 pulse
