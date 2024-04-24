@@ -1,12 +1,15 @@
+.
+..
+.git
+.gitignore
+Electron
 btop
 cef_user_data
 dconf
 discord
-Electron
 go
 gtk-3.0
 ibus
-lazy-lock.json
 obs-studio
 pavucontrol.ini
 pulse
