@@ -9,6 +9,7 @@ return {
         "saadparwaiz1/cmp_luasnip",
         "onsails/lspkind.nvim",
         "hrsh7th/cmp-calc",
+        "soulis-1256/eagle.nvim",
         {
             "windwp/nvim-autopairs",
             event = "InsertEnter",
@@ -109,6 +110,8 @@ return {
             'confirm_done',
             cmp_autopairs.on_confirm_done()
         )
+
+        require("eagle").setup()
     end,
     lazy = false,
 }

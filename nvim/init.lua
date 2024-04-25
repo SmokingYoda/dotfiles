@@ -162,6 +162,12 @@ require("lazy").setup({
         end,
         lazy = false,
     },
+    {
+        "ibhagwan/fzf-lua",
+        config = function()
+            require("fzf-lua").setup({})
+        end
+    },
 })
 
 require("options")

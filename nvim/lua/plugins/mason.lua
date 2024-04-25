@@ -3,6 +3,19 @@ return {
     dependencies = {
         "williamboman/mason-lspconfig.nvim",
         "hrsh7th/cmp-nvim-lsp",
+        "mrcjkb/rustaceanvim",
+        {
+            "ray-x/go.nvim",
+            dependencies = { -- optional packages
+                "ray-x/guihua.lua",
+            },
+            config = function()
+                require("go").setup()
+            end,
+            event = { "CmdlineEnter" },
+            ft = { "go", 'gomod' },
+            build = ':lua require("go.install").update_all_sync()' -- if you need to install/update all binaries
+        },
         {
             "SmiteshP/nvim-navbuddy",
             dependencies = {
@@ -192,7 +205,7 @@ return {
                 "biome",
                 "taplo",
                 "sqlls",
-                "rust_analyzer",
+                -- "rust_analyzer", is disabled for rustaceanvim
                 "pylsp",
                 "powershell_es",
                 "intelephense",
@@ -211,6 +224,10 @@ return {
             automatic_installation = true,
             handlers = {
                 function(server)
+                    if server == "rust_analyzer" then
+                        return
+                    end
+
                     local navbuddy = require("nvim-navbuddy")
                     local on_attach = function(client, bufnr)
                         if client.server_capabilities.documentSymbolProvider then

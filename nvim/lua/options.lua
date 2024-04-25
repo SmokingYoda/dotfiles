@@ -9,33 +9,34 @@ g["loaded_python3_provider"] = 0
 g["loaded_perl_provider"] = 0
 g["loaded_ruby_provider"] = 0
 
-o.laststatus = 3
-o.showmode = false
 o.cursorline = true
 o.cursorlineopt = "number"
 o.expandtab = true
-o.shiftwidth = 4
-o.smartindent = true
-o.tabstop = 4
-o.softtabstop = 4
+o.foldcolumn = '1' -- '0' is not bad
+o.foldenable = true
+o.foldexpr = "nvim_treesitter#foldexpr()"
+o.foldlevel = 99   -- Using ufo provider need a large value, feel free to decrease the value
+o.foldlevelstart = 99
+o.foldmethod = "expr"
 o.ignorecase = true
-o.smartcase = true
+o.laststatus = 3
 o.mouse = "a"
+o.mousemoveevent = true
 o.number = true
 o.numberwidth = 4
 o.ruler = false
+o.shiftwidth = 4
+o.showmode = false
 o.signcolumn = "yes"
+o.smartcase = true
+o.smartindent = true
+o.softtabstop = 4
 o.splitbelow = true
 o.splitright = true
+o.tabstop = 4
 o.timeoutlen = 400
 o.undofile = true
 o.updatetime = 250
-o.foldmethod = "expr"
-o.foldexpr = "nvim_treesitter#foldexpr()"
-o.foldcolumn = '1' -- '0' is not bad
-o.foldlevel = 99   -- Using ufo provider need a large value, feel free to decrease the value
-o.foldlevelstart = 99
-o.foldenable = true
 
 opt.shortmess:append "sI"
 opt.whichwrap:append "<>[]hl"
