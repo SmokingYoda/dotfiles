@@ -8,6 +8,7 @@ return {
         "hrsh7th/cmp-cmdline",
         "saadparwaiz1/cmp_luasnip",
         "onsails/lspkind.nvim",
+        "hrsh7th/cmp-calc",
         {
             "windwp/nvim-autopairs",
             event = "InsertEnter",
@@ -76,8 +77,14 @@ return {
                 ["<CR>"] = cmp.mapping.confirm({ select = true }),
             }),
             sources = cmp.config.sources({
-                { name = "nvim_lsp" },
+                {
+                    name = "nvim_lsp",
+                    entry_filter = function(entry)
+                        return cmp.lsp.CompletionItemKind.Snippet ~= entry:get_kind()
+                    end
+                },
                 { name = "luasnip" },
+                { name = "calc" },
             }, {
                 { name = "buffer" }
             })

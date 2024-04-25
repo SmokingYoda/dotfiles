@@ -117,8 +117,10 @@ require("lazy").setup({
         opts = {
             formatters_by_ft = {
                 lua = { "stylua" },
-                javascript = { { "prettier" } },
-                typescript = { { "prettier" } },
+                javascript = { "prettier" },
+                typescript = { "prettier" },
+                rust = { "ast-grep" },
+                bash = { "beatysh" },
             },
         },
         lazy = false,
