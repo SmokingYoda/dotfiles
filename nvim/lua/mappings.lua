@@ -8,4 +8,5 @@ wk({
     ["<c-j>"] = { ":m+1<cr>==", "Move line up." },
     ["<f3>"] = { ":Telescope fd<cr>", "Find." },
     ["<c-f>"] = { ":Telescope current_buffer_fuzzy_find<cr>", "Find." },
+    [" s"] = { "viB:sort<cr>", "Sort current paragraph" },
 })
