@@ -13,6 +13,8 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
+require("options")
+
 require("lazy").setup({
     require("plugins.treesitter"),
     require("plugins.mason"),
@@ -169,5 +171,4 @@ require("lazy").setup({
     },
 })
 
-require("options")
 require("mappings")
