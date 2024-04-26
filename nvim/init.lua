@@ -23,6 +23,17 @@ require("lazy").setup({
     require("plugins.comment"),
     require("plugins.ui"),
     {
+        "nvim-neorg/neorg",
+        lazy = false, -- Disable lazy loading as some `lazy.nvim` distributions set `lazy = true` by default
+        version = "*", -- Pin Neorg to the latest stable release
+        config = true,
+        dependencies = {
+            "vhyrro/luarocks.nvim",
+            priority = 1000,
+            config = true,
+        }
+    },
+    {
         'Wansmer/treesj',
         keys = { '<space>m', '<space>j', '<space>s' },
         config = function()
@@ -110,7 +121,6 @@ require("lazy").setup({
         event = "VeryLazy",
         opts = {},
         lazy = false,
-
     },
     {
         "stevearc/conform.nvim",
@@ -165,7 +175,7 @@ require("lazy").setup({
     {
         "ibhagwan/fzf-lua",
         config = function()
-            require("fzf-lua").setup({})
+            require("fzf-lua").setup()
         end
     },
 })

@@ -34,6 +34,7 @@ return {
     {
         "akinsho/bufferline.nvim",
         opts = {},
+        lazy = false
     },
     require("plugins.ibl"),
     require("plugins.lualine"),
