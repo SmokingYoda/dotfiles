@@ -196,35 +196,11 @@ return {
         }
 
         require("mason-lspconfig").setup({
-            ensure_installed = {
-                "lua_ls",
-                "zls",
-                "yamlls",
-                "lemminx",
-                "vimls",
-                "biome",
-                "taplo",
-                "sqlls",
-                -- "rust_analyzer", is disabled for rustaceanvim
-                "pylsp",
-                "powershell_es",
-                "intelephense",
-                "markdown_oxide",
-                "autotools_ls",
-                "kotlin_language_server",
-                "jdtls",
-                "html",
-                "diagnosticls",
-                "cssls",
-                "cmake",
-                "clangd",
-                "omnisharp_mono",
-                "bashls",
-            },
+            ensure_installed = require("languages.lsp"),
             automatic_installation = true,
             handlers = {
                 function(server)
-                    if server == "rust_analyzer" then
+                    if server == "rust_analyzer" then -- if you're planning to use rust_analyzer and not rustaceanvim remove the if statement.
                         return
                     end
 

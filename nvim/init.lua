@@ -23,17 +23,6 @@ require("lazy").setup({
     require("plugins.comment"),
     require("plugins.ui"),
     {
-        "nvim-neorg/neorg",
-        lazy = false, -- Disable lazy loading as some `lazy.nvim` distributions set `lazy = true` by default
-        version = "*", -- Pin Neorg to the latest stable release
-        config = true,
-        dependencies = {
-            "vhyrro/luarocks.nvim",
-            priority = 1000,
-            config = true,
-        }
-    },
-    {
         'Wansmer/treesj',
         keys = { '<space>m', '<space>j', '<space>s' },
         config = function()
