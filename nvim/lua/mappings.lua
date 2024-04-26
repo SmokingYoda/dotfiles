@@ -9,4 +9,9 @@ wk({
     ["<f3>"] = { ":Telescope fd<cr>", "Find." },
     ["<c-f>"] = { ":Telescope current_buffer_fuzzy_find<cr>", "Find." },
     [" s"] = { "viB:sort<cr>", "Sort current paragraph" },
+    ["<c-a>"] = { "ggVG", "Select all." },
+    ["<c-s>"] = { ":w<cr>", "Save." },
+    ["<c-s>a"] = { ":wa<cr>", "Save all." },
+    ["<c-q>"] = { ":q!<cr>", "Save all." },
+    ["<c-q>a"] = { ":qa!<cr>", "Save all." },
 })
