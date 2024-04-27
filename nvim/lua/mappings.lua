@@ -20,6 +20,7 @@ wk({
         ["n"] = { ":Neotree toggle<cr>", "Toggle neotree." },
         ["z"] = { ":ZenMode<cr>", "Toggle zen mod." },
         ["p"] = { ":Telescope projects<cr>", "Show projects." },
+        ["m"] = { ":MarkdownPreviewToggle<cr>", "Show markdown." },
         name = "Show git, lsp and other plugins.",
     },
     ["<c-e>"] = {
@@ -48,7 +49,7 @@ wk({
         ["d"] = { ":FzfLua lgrep_curbuf<cr>", "Search current file." },
         ["f"] = { ":FzfLua live_grep<cr>", "Search project." },
     }
-}, { nowait = true })
+})
 
 wk({
     ["<c-f>"] = { "<esc>:FzfLua lgrep_curbuf<cr>", "Search current file." },
