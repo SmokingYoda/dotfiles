@@ -1,5 +1,4 @@
 return {
-    -- "rust_analyzer" is disabled for rustaceanvim
     "lua_ls",
     "zls",
     "yamlls",
@@ -16,10 +15,11 @@ return {
     "kotlin_language_server",
     "jdtls",
     "html",
-    "diagnosticls",
     "cssls",
     "cmake",
     "clangd",
     "omnisharp_mono",
     "bashls",
+    "prettier",
+    "jsonls",
 }

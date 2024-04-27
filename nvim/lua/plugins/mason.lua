@@ -188,12 +188,15 @@ return {
             }
         })
 
-        local capabilities = vim.lsp.protocol.make_client_capabilities()
+        local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
         capabilities.textDocument.foldingRange = {
             dynamicRegistration = false,
             lineFoldingOnly = true
         }
+
+
+        local lsp = require("lspconfig")
 
         require("mason-lspconfig").setup({
             ensure_installed = require("languages.lsp"),
@@ -204,27 +207,26 @@ return {
                         return
                     end
 
-                    local navbuddy = require("nvim-navbuddy")
-                    local on_attach = function(client, bufnr)
-                        if client.server_capabilities.documentSymbolProvider then
-                            navbuddy.attach(client, bufnr)
-                        end
+                    if server == "lua_ls" then
+                        lsp[server].setup({
+                            settings = {
+                                Lua = {
+                                    completion = {
+                                        callSnippet = "Replace"
+                                    }
+                                }
+                            }
+                        })
                     end
 
-                    if server == "lua_ls" then
-                        require("lspconfig")[server].setup({
-                            completion = {
-                                callSnippet = "Replace"
-                            },
-                            capabilities = capabilities,
-                            on_attach = on_attach,
-                        })
-                    else
-                        require("lspconfig")[server].setup({
-                            capabilities = capabilities,
-                            on_attach = on_attach,
-                        })
-                    end
+                    lsp[server].setup({
+                        on_attach = function(client, bufnr)
+                            if client.server_capabilities.documentSymbolProvider then
+                                return require("nvim-navic").attach(client, bufnr)
+                            end
+                        end,
+                        capabilities = capabilities,
+                    })
                 end
             }
         })

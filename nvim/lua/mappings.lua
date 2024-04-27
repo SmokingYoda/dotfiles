@@ -29,7 +29,6 @@ wk({
         ["<right>"] = { "v$hd", "Remove from cursor to the end of the line." },
         ["<up>"] = { ":m-2<cr>==", "Move line up." },
         ["b"] = { "viB:sort<cr>", "Sort inside {}" },
-        ["f"] = { ":lua vim.lsp.buf.format({ async = true})<cr>", "Format current file." },
         ["p"] = { "vib:sort<cr>", "Sort inside ()."},
         ["r"] = { ":lua vim.lsp.buf.rename()<cr>", "Rename selected." },
         name = "Edit",
@@ -48,7 +47,8 @@ wk({
         ["c"] = { ":FzfLua grep_cword<cr>", "Find word under cursor." },
         ["d"] = { ":FzfLua lgrep_curbuf<cr>", "Search current file." },
         ["f"] = { ":FzfLua live_grep<cr>", "Search project." },
-    }
+    },
+    [" f"] = { ":lua vim.lsp.buf.format({ async = true})<cr>", "Format current file." },
 })
 
 wk({
