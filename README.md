@@ -1,4 +1,0 @@
-Screenshot
----
-
-![screenshot](./screenshot.png) 
